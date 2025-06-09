@@ -121,7 +121,7 @@ Key Takeaways:
 - Shorter drawdowns in 2024 reflect more recent volatility, including ongoing dips without full recovery.
 
 ## Files
-stock_return_analysis1.R:: Full code for data download, return calculation, and plots
+-  [stock_return_analysis1.R](stock_return_analysis1.R):: Full code for data download, return calculation, and plots
 
 ## 🧠 Final Reflection
 
