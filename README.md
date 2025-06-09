@@ -120,6 +120,8 @@ Key Takeaways:
 - The 2021–2022 correction also resulted in a sharp 71.87% decline, but this time recovery came much faster (185 days), showing how post-COVID tech strength helped rebound.
 - Shorter drawdowns in 2024 reflect more recent volatility, including ongoing dips without full recovery.
 
+## Files
+stock_return_analysis1.R:: Full code for data download, return calculation, and plots
 
 ## 🧠 Final Reflection
 
