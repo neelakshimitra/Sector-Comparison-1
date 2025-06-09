@@ -40,7 +40,6 @@ I visualised the daily log return differences and their cumulative sum over time
 ### Comparing Log vs Simple Returns
 
 To understand the practical difference between arithmetic (simple) and log returns, I plotted both for each stock.
-
 - The black line shows cumulative returns using compounded arithmetic returns.
 - The red line shows cumulative log returns using cumsum().
 
@@ -64,10 +63,60 @@ This illustrates that while log and simple returns are nearly identical in the s
 Each chart includes: Top panel-Cumulative return, Middle panel- Daily returns, Bottom panel- Drawdowns (peak-to-trough loss)
 
 Key insights:
-
 - XOM and JPM show clear divergence between Close and Adjusted returns. The Adjusted returns (pink) are consistently higher, reflecting dividend payouts and other corporate actions. This confirms that Adjusted prices give a more accurate picture of investor returns, especially over long periods.
-  
-- 
+- NVDA shows minimal difference between Close and Adjusted returns, which is expected for a growth-oriented stock that doesn’t pay regular dividends. This supports the idea that for tech stocks with fewer corporate actions, Close prices may be less misleading — but Adjusted is still safer.
+- The drawdown charts show similar patterns for both return types, but because cumulative returns are higher for Adjusted, the impact of drawdowns appears milder when returns are properly adjusted.
+
+### Understanding Drawdowns
+
+The bottom panel of each charts.PerformanceSummary() output visualizes drawdowns— periods where the investment declines from its previous peak. It measures the magnitude and duration of losses, which is a more intuitive and emotionally relevant measure of risk than volatility alone.
+
+For example:
+- XOM and JPM, which have steadier growth, show more frequent and longer-lasting drawdowns — especially during events like the 2008 financial crisis and COVID crash.
+- NVDA, while highly volatile, shows deep drawdowns but also rapid recoveries due to explosive post-2020 growth.
+
+The Adjusted series typically shows smaller drawdowns than the Close series, because dividends (reflected in Adjusted prices) slightly soften the perceived loss.
+
+This helped me understand that drawdowns show how painful a stock's history might feel to a real investor, and why it’s essential to look beyond return and volatility when evaluating performance.
 
 
+### Sector Comparison: Tech vs Energy vs Finance-  Close vs Adjusted Comparison
+
+To directly compare the performance of Tech (NVDA), Energy (XOM), and Finance (JPM), I merged the adjusted and close return series for all three stocks and visualized them using charts.PerformanceSummary().
+
+**Chart 1: NDVAvsXOMvsJPM (Close vs Adjusted)**
+
+Key Insights:
+- Adjusted returns significantly outperformed Close returns for XOM and JPM, highlighting the impact of dividends and corporate actions.
+- NVDA, which rarely pays dividends, showed minimal difference — but the exercise confirms that Adjusted returns provide a more accurate picture of investor gains.
+- Volatility and drawdown behavior differed by sector: NVDA had higher spikes and deeper drawdowns but rebounded strongly, while XOM and JPM were more stable.
+
+### Sector Comparison – Adjusted Log Returns
+
+In this plot, I focused only on the Adjusted log return series to ensure a fair comparison of growth and risk between sectors.
+
+- NVDA (Tech) outperformed all others, with exponential growth especially after 2016. Its return curve steepened dramatically post-2020, aligned with the rise of AI and semiconductor demand.
+- XOM (Energy) displayed the most muted growth and recovered slowly after crises, reflecting the cyclical nature of the energy sector.
+- JPM (Finance) delivered steady, moderate returns with periodic drawdowns during global shocks (e.g., 2008, COVID), but overall resilience.
+
+## Quantitative Summary: Return, Volatility, and Drawdowns
+
+### Annualised Performance Summary
+
+I compared both Close and Adjusted series for completeness, but the Adjusted values are more representative of actual investor experience.
+
+Key Takeaways:
+- NVDA had the highest return overall, with 19.30% annually on Adjusted prices — nearly 10x that of JPM and 11x XOM. Despite high volatility (~49.7%), it maintained the strongest Sharpe Ratio (0.2790), reflecting strong returns per unit of risk.
+- XOM had a negative return (-1.84%) using Close prices, but this flipped to a positive 1.68% when dividends were included — a clear example of how Close prices can understate actual gains.
+- JPM improved from a 2.24% Close-based return to 4.90% Adjusted, but its Sharpe Ratio remained close to zero (0.0037), suggesting limited compensation for volatility.
+
+
+### Drawdown Analysis: 
+
+I analysed maximum drawdowns — the percentage drop from a stock’s peak to its lowest point before recovering. These show the depth and duration of losses, which are critical for understanding investor experience during market stress.
+
+Key Takeaways:
+- The 2008 crash wiped out nearly 90% of portfolio value, and it took over 8 years (2,038 trading days) to recover — a powerful reminder of the long-term impact of market crashes.
+- The 2021–2022 correction also resulted in a sharp 71.87% decline, but this time recovery came much faster (185 days), showing how post-COVID tech strength helped rebound.
+- Shorter drawdowns in 2024 reflect more recent volatility, including ongoing dips without full recovery.
 
