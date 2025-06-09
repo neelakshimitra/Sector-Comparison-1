@@ -16,7 +16,7 @@ These plots are visually noisy because returns fluctuate frequently showing a lo
 
 To understand the long-term performance of each stock, I calculated cumulative returns using adjusted closing prices. The y-axis shows how much a £1 investment would have grown over time.
 
-What I found:
+**What I found:**
 
 NVDA- a £1 investment in 2007 in Nvidia would be worth £250+ by 2025, which is a massive growth, especially relative to the other two stocks. Most of this growth occured post 2016, most likely due to its dominance in AI and GPUs.
 
@@ -120,8 +120,12 @@ Key Takeaways:
 - The 2021–2022 correction also resulted in a sharp 71.87% decline, but this time recovery came much faster (185 days), showing how post-COVID tech strength helped rebound.
 - Shorter drawdowns in 2024 reflect more recent volatility, including ongoing dips without full recovery.
 
+
+
 ## Files
 -  [stock_return_analysis1.R](stock_return_analysis1.R):: Full code for data download, return calculation, and plots
+
+
 
 ## 🧠 Final Reflection
 
