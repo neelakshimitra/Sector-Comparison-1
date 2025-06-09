@@ -31,7 +31,7 @@ I also calculated log returns for each stock to compare them with arithmetic dai
 Compared to arithmetic returns, log returns are symmetrical and additive over time, making them useful for statistical analysis. However, like daily returns, they don't reveal long-term trends clearly — which is why I also looked at cumulative returns and performance summaries.
 
 
-To understand the difference between Close and Adjusted prices and their differing affects on acutal return,I calculated and plotted the log returns using both Close and Adjusted prices for each stock.
+To understand the difference between Close and Adjusted prices and their differing affects on actual return,I calculated and plotted the log returns using both Close and Adjusted prices for each stock.
 
 For XOM and JPM, which are both dividend-paying companies, there was a visible and growing gap between cumulative Close-based returns and Adjusted-based returns. In contrast, NVDA showed almost no difference — which aligns with the fact that it rarely pays dividends and has fewer price-adjusting corporate actions.
 
@@ -111,7 +111,7 @@ Key Takeaways:
 - JPM improved from a 2.24% Close-based return to 4.90% Adjusted, but its Sharpe Ratio remained close to zero (0.0037), suggesting limited compensation for volatility.
 
 
-### Drawdown Analysis: 
+### Drawdown Analysis
 
 I analysed maximum drawdowns — the percentage drop from a stock’s peak to its lowest point before recovering. These show the depth and duration of losses, which are critical for understanding investor experience during market stress.
 
@@ -119,4 +119,9 @@ Key Takeaways:
 - The 2008 crash wiped out nearly 90% of portfolio value, and it took over 8 years (2,038 trading days) to recover — a powerful reminder of the long-term impact of market crashes.
 - The 2021–2022 correction also resulted in a sharp 71.87% decline, but this time recovery came much faster (185 days), showing how post-COVID tech strength helped rebound.
 - Shorter drawdowns in 2024 reflect more recent volatility, including ongoing dips without full recovery.
+
+
+## 🧠 Final Reflection
+
+This project helped me bridge theoretical return calculations with practical financial analysis. By manually coding return logic and then validating it using PerformanceAnalytics, I gained a clearer understanding of how different sectors behave, how dividends and splits affect performance, and why risk metrics like drawdowns and Sharpe ratios matter as much as returns. This is one of my first end-to-end financial analytics projects in R, and I'm excited to continue building on this foundation.
 
